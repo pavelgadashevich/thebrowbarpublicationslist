@@ -1,0 +1,17 @@
+.header {
+    background: $mainBackColor;
+    padding:15px 0;
+    color: $mainFontColor;
+    .inblock {
+        display:flex;
+        justify-content: space-between;
+    }
+    .logo {
+        flex:0 0 141px;
+        height:74px;
+        background:url('../../assets/img/logo.png');
+    }
+    .title {
+        font:32px 'arial narrow';
+    }
+}
