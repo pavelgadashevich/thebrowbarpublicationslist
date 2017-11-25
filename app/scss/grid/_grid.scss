@@ -1,0 +1,21 @@
+.inblock {
+    padding:0 15px;
+}
+
+@media screen and (min-width: $screenSm) {
+
+    .inblock {
+        padding:0 40px;
+    }
+
+}
+
+@media screen and (min-width: $screenMd) {
+
+    .inblock {
+        max-width:1170px;
+        margin:0 auto;
+        padding:0;
+    }
+
+}

@@ -1,0 +1,20 @@
+// imports
+//////////////////////
+
+//resets
+@import 'reset/reset';
+
+// globals
+@import 'globals/colors';
+@import 'globals/fonts';
+
+// grid
+@import 'grid/media';
+@import 'grid/grid';
+
+// parts
+@import 'parts/header';
+@import 'parts/main';
+
+// components
+@import 'components/publicationsList';

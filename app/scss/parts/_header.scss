@@ -1,0 +1,55 @@
+.header {
+    background: $mainBackColor;
+    padding:15px 0;
+    color: $mainFontColor;
+
+    .inblock {
+        display:flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .logo {
+        width:174px;
+        height:40px;
+        background:url('../../assets/img/logoxs.png');
+        margin:0 0 15px;
+    }
+
+    .title {
+        @include mainFont(27px, 36px);
+        text-align:center;
+    }
+}
+@media screen and (min-width: $screenSm) {
+
+    .header {
+        .inblock {
+            flex-flow: row;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 141px;
+            height:74px;
+            background:url('../../assets/img/logo.png');
+            margin:0 15px 0 0;
+        }
+
+        .title {
+            @include mainFont(37px, 37px);
+            text-transform:uppercase;
+            max-width:calc(100% - 156px);
+            text-align:right;
+        }
+    }
+
+}
+
+@media screen and (min-width: $screenMd) {
+
+    .header {
+        margin:0 0 30px;
+    }
+
+}
