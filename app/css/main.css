@@ -33,13 +33,13 @@ table {
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../../assets/fonts/RobotoCondensed-Light.ttf");
+  src: url("../assets/fonts/RobotoCondensed-Light.ttf");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../../assets/fonts/RobotoCondensed-Bold.ttf");
+  src: url("../assets/fonts/RobotoCondensed-Bold.ttf");
   font-weight: 700;
   font-style: normal; }
 
@@ -67,7 +67,7 @@ table {
   .header .logo {
     width: 174px;
     height: 40px;
-    background: url("../../assets/img/logoxs.png");
+    background: url("../assets/img/logoxs.png");
     margin: 0 0 15px; }
   .header .title {
     font-size: 27px;
@@ -83,7 +83,7 @@ table {
   .header .logo {
     width: 141px;
     height: 74px;
-    background: url("../../assets/img/logo.png");
+    background: url("../assets/img/logo.png");
     margin: 0 15px 0 0; }
   .header .title {
     font-size: 37px;

@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 // path
 //////////////////////
 var path = {
-    src: { 
+    src: {
         html: 'app/*.html',
         pug: 'app/pug/*.pug',
         css: 'app/css/',
@@ -20,7 +20,7 @@ var path = {
     },
     watch: {
         pug: 'app/pug/**/*.pug',
-        scss: 'app/scss/**/*.scss'        
+        scss: 'app/scss/**/*.scss'
     },
     build: {
         basedir: 'dest/',
@@ -36,7 +36,7 @@ var path = {
 gulp.task('watch:server', function() {
     sync({
         server: {
-            baseDir: path.basedir            
+            baseDir: path.basedir
         },
         port: 8080,
         open: true,
@@ -64,7 +64,7 @@ gulp.task('watch:pug', function() {
             console.log(error);
             this.end();
            })
-        )      
+        )
         .pipe(gulp.dest(path.basedir))
         .pipe(sync.reload({
             stream: true
@@ -74,16 +74,16 @@ gulp.task('watch:pug', function() {
 // watch all
 gulp.task('watch', ['watch:server','watch:pug','watch:sass'], function() {
     gulp.watch(path.watch.pug, ['watch:pug']);
-    gulp.watch(path.watch.scss, ['watch:sass']);    
+    gulp.watch(path.watch.scss, ['watch:sass']);
 })
 
 // build
 //////////////////////
 
-// build:html
+// build:css
 gulp.task('build:css', function() {
     gulp.src(path.src.cssinput)
-        .pipe(cleancss())        
+        .pipe(cleancss())
         .pipe(gulp.dest(path.build.css));
 });
 
