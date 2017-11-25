@@ -2,13 +2,19 @@
 //////////////////////
 
 //resets
-@import 'reset';
+@import 'reset/reset';
 
 // globals
-@import 'colors';
+@import 'globals/colors';
+@import 'globals/fonts';
 
 // grid
-@import 'grid';
+@import 'grid/media';
+@import 'grid/grid';
+
+// parts
+@import 'parts/header';
+@import 'parts/main';
 
 // components
-@import 'publicationsList';
+@import 'components/publicationsList';

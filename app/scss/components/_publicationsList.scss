@@ -1,17 +1,59 @@
-.header {
-    background: $mainBackColor;
-    padding:15px 0;
-    color: $mainFontColor;
-    .inblock {
-        display:flex;
+.publicationsList {
+    display:flex;
+    flex-flow:column;
+
+    article {
+        position:relative;
+        overflow:hidden;
+    }
+
+    img {
+        display:block;
+        width:100%;
+        max-width:100%;
+    }
+
+    .description {
+        @include mainFont(18px, 24px);
+        color: $mainFontColor;
+        position:absolute;
+        bottom:15px;
+        left:15px;
+        right:15px;
+        background:$blackOpacity;
+        padding:15px;
+    }
+    .date {
+        @include mainFont(16px, 24px, 700);
+        margin:0 0 10px;
+    }
+}
+
+@media screen and (min-width: $screenSm) {
+
+    .publicationsList {
+        flex-flow:row wrap;
         justify-content: space-between;
+
+        article {
+            flex:0 0 50%;
+            max-width:50%;
+        }
     }
-    .logo {
-        flex:0 0 141px;
-        height:74px;
-        background:url('../../assets/img/logo.png');
+
+}
+
+@media screen and (min-width: $screenMd) {
+
+    .publicationsList {
+        article {
+            box-shadow:0 0 8px 2px $blackOpacity;
+            flex:0 0 calc(50% - 15px);
+            margin:0 0 30px;
+        }
+        .description {
+            @include mainFont(21px, 27px);    
+        }
     }
-    .title {
-        font:32px 'arial narrow';
-    }
+
 }
